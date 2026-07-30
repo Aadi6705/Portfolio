@@ -1,0 +1,2 @@
+PLACEHOLDER — replace with a high-resolution profile photo named "profile.jpg" or "profile.webp".
+Specs per Design.md §7: square-cropped, minimum 400×400px, no circular crop.

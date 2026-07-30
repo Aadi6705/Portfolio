@@ -1,0 +1,110 @@
+/* ─── Tailwind base layers ─────────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base / reset ────────────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Heading defaults — IBM Plex Serif */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+
+  /* Focus ring — keyboard-visible, Design.md §4 */
+  :focus-visible {
+    outline: 2px solid theme('colors.brass');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ─── Shared layout utilities ─────────────────────────────────────────────── */
+@layer utilities {
+  /* Max content width centered with gutters (Design.md §4) */
+  .content-container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    .content-container {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+  }
+
+  /* Section vertical rhythm (Design.md §4) */
+  .section-padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+
+  /* IBM Plex Mono label style (Design.md §3 — labels, meta, tags) */
+  .mono-label {
+    @apply font-mono text-caption uppercase tracking-widest text-brass;
+    letter-spacing: 0.08em;
+  }
+
+  /* Hairline top rule (Design.md §5 — Ledger Cards) */
+  .hairline-top {
+    border-top: 1px solid theme('colors.slate');
+  }
+
+  /* Ledger card signature element (Design.md §5) */
+  .ledger-card {
+    border: 1px solid theme('colors.slate');
+    border-top: 1px solid theme('colors.slate');
+    padding: 32px;
+    background-color: theme('colors.paper');
+    position: relative;
+  }
+
+  /* Placeholder link state (Rules.md §3, §6) */
+  a[data-placeholder="true"] {
+    @apply text-slate cursor-not-allowed opacity-60;
+    pointer-events: none;
+  }
+}

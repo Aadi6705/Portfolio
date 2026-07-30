@@ -1,0 +1,15 @@
+# Netlify deployment config — Aditya Srivastava Portfolio
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  node_bundler = "esbuild"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA redirect — serves index.html for all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Design.md: Navy brand color #16324F, Brass accent #A9823C -->
+  <rect width="32" height="32" rx="4" fill="#16324F"/>
+  <!-- "AS" initials in IBM Plex style, Brass color -->
+  <text
+    x="50%"
+    y="50%"
+    dominant-baseline="central"
+    text-anchor="middle"
+    font-family="IBM Plex Serif, Georgia, serif"
+    font-size="14"
+    font-weight="600"
+    fill="#A9823C"
+    letter-spacing="0.5"
+  >AS</text>
+</svg>
