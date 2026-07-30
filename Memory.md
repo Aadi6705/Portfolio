@@ -3,25 +3,28 @@
 
 ---
 
-## Current State: Phase 4 COMPLETE ✓
+## Current State: Phase 5 COMPLETE ✓
 
-**Last updated:** 2026-07-31 (Phase 4 sign-off)
+**Last updated:** 2026-07-31 (Phase 5 sign-off)
 **Branch:** main (synced with GitHub remote)
 
 ---
 
-## Phase 4 — What Was Completed
+## Phase 5 — What Was Completed
 
-- Built `Skills.jsx` component rendering technical skills in 4 ledger-card categories (**Languages**, **Data & ML**, **Web**, **Tools**).
-- Used IBM Plex Mono for tag labels and Remix Icons for category headings.
-- Ensured non-flat tag dump layout and full keyboard/screen-reader accessibility.
+- Extracted real GitHub URLs from `resume.pdf` for both projects and the main profile.
+- Built `ProjectCard.jsx` following Design.md rules: ledger card style, highlight bullets, metrics, stack tags, and external link icons.
+- Added visual placeholder logic in `ProjectCard` to display a branded frame until the user supplies real screenshots.
+- Built `Projects.jsx` wrapping the cards in a responsive grid.
 - Verified `npm run build` succeeds cleanly.
 
 ### Files modified
 
 | File | Status |
 |---|---|
-| `src/components/sections/Skills.jsx` | ✓ |
+| `src/data/content.js` | ✓ (added links & image paths) |
+| `src/components/ui/ProjectCard.jsx` | ✓ |
+| `src/components/sections/Projects.jsx` | ✓ |
 
 ---
 
@@ -44,28 +47,28 @@
 4. **"Third-year" vs 2027 graduation-year note (PRD.md §11):** Left as-is from resume — confirm before Phase 10.
 5. **Phone number:** `[TODO]` in content.js — need exact number from resume.
 6. **Certification years and credential IDs:** `[TODO]` in content.js for all three certs.
-7. **Social URLs:** All placeholder (`href="#"`) — LinkedIn, GitHub, HackerRank, LeetCode needed.
-8. **GitHub repo URLs:** FinanceFlow and House Price Prediction projects — needed for Phase 5.
-9. **Project Visuals / Screenshots:** Screenshots or diagrams for FinanceFlow and Explainable House Price Prediction (until supplied, placeholder frames are used per system instructions).
+7. **Social URLs:** LinkedIn, HackerRank, LeetCode still need real links (GitHub is done).
+8. **Project Screenshots:** Need to be uploaded to `/public/projects/financeflow.jpg` and `/public/projects/house-price.jpg` and `hasImage` set to true in `content.js`.
 
 ---
 
-## Phase 4 Exit Criteria Check
+## Phase 5 Exit Criteria Check
 
 | Criterion | Status |
 |---|---|
-| Categories visually distinct (not flat tag dump) | ✓ |
-| Keyboard/screen-reader order sensible | ✓ |
+| `ProjectCard.jsx` reusable component built | ✓ |
+| Real GitHub links integrated | ✓ |
+| Placeholder visuals display correctly | ✓ |
+| Single column on mobile, 2 columns desktop | ✓ |
 | `npm run build` succeeds | ✓ |
 
 ---
 
 ## Next Step to Resume From
 
-**Start Phase 5 — Projects**
+**Start Phase 6 — Certifications**
 
 Tasks:
-1. Build reusable `ProjectCard.jsx` showing stack tags, highlight bullets, metrics, and GitHub links.
-2. Build `Projects.jsx` displaying **FinanceFlow** and **Explainable House Price Prediction** in ledger cards.
-3. Ensure single column stack under 768px and external links open in new tab with `rel="noopener noreferrer"`.
-4. Ask user for GitHub repo links and project diagrams/screenshots if available.
+1. Build `Certifications.jsx` as a vertical stack of three ledger cards.
+2. No swiper carousel (confirmed in Memory.md).
+3. Ensure single column stack under 768px.

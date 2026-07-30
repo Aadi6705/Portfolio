@@ -42,8 +42,8 @@ export const socials = [
     id: 'github',
     label: 'GitHub',
     icon: 'ri-github-line',
-    url: '#',
-    placeholder: true,
+    url: 'https://github.com/Aadi6705',
+    placeholder: false,
   },
   {
     id: 'hackerrank',
@@ -149,9 +149,11 @@ export const projects = [
       // TODO: add more specific metric if resume supplies one
     ],
     metrics: [], // TODO: supply real metrics from resume if available
-    githubUrl: '#', // TODO: real repo URL
-    githubPlaceholder: true,
+    githubUrl: 'https://github.com/Aadi6705/Financial-Intelligence',
+    githubPlaceholder: false,
     liveUrl: null,  // no live demo — GitHub only per PRD.md §11
+    image: '/projects/financeflow.jpg',
+    hasImage: false,
   },
   {
     id: 'house-price',
@@ -170,9 +172,11 @@ export const projects = [
     metrics: [
       { label: 'MAE', value: '≈ ₹15,562', note: 'currency assumed INR — confirm' },
     ],
-    githubUrl: '#', // TODO: real repo URL
-    githubPlaceholder: true,
+    githubUrl: 'https://github.com/Aadi6705/Housing-Prediction',
+    githubPlaceholder: false,
     liveUrl: null,
+    image: '/projects/house-price.jpg',
+    hasImage: false,
   },
 ]
 
