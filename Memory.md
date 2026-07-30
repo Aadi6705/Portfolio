@@ -3,29 +3,32 @@
 
 ---
 
-## Current State: Phase 2 COMPLETE ✓
+## Current State: Phase 3 COMPLETE ✓
 
-**Last updated:** 2026-07-31 (Phase 2 sign-off)
+**Last updated:** 2026-07-31 (Phase 3 sign-off)
 **Branch:** main (synced with GitHub remote)
 
 ---
 
-## Phase 2 — What Was Completed
+## Phase 3 — What Was Completed
 
-- Built `Hero.jsx` section with responsive 12-column grid layout.
-- Integrated `typed.js` for rotating role text with a blinking cursor (respecting `prefers-reduced-motion` for accessibility).
-- Applied decorative 2px Navy frame to the profile photo per `Design.md`.
-- Added primary CTAs (View Projects, Download Resume) using the `Button` UI component.
-- Implemented entrance animations using `useScrollReveal`.
-- Replaced placeholder files with actual `resume.pdf` and `profile.jpg` in `/public`.
+- Extracted accurate marks, years, and semester scores from `documents/Academics.md`.
+- Updated `src/data/content.js` with exact academic details:
+  - SRM IST (2023–2027, CGPA 8.14, 0 Backlogs, Sem 1–6 SGPA breakdown).
+  - Class XII (City Montessori School, CISCE, 2022–2023, 87%, CGPA 8.7).
+  - Class X (City Montessori School, CISCE, 2020–2021, 85.2%, CGPA 8.52).
+- Built `About.jsx` rendering clean, professional summary copy and a profile highlight card.
+- Built `Education.jsx` displaying a two-tier timeline with custom brass markers, backlogs badge, and an inline SVG-less SGPA bar chart for semester performance.
+- Verified `npm run build` succeeds.
 
 ### Files modified
 
 | File | Status |
 |---|---|
-| `src/components/sections/Hero.jsx` | ✓ |
-| `public/profile.jpg` | ✓ (added) |
-| `public/resume.pdf` | ✓ (added) |
+| `documents/Academics.md` | ✓ (read as source of truth) |
+| `src/data/content.js` | ✓ (updated `education`) |
+| `src/components/sections/About.jsx` | ✓ |
+| `src/components/sections/Education.jsx` | ✓ |
 
 ---
 
@@ -36,6 +39,7 @@
 | Certifications layout | Clean ledger-card list (3 items) | Carousel not justified for 3 items; Aditya confirmed this |
 | `react-typed` → `typed.js` | Used `typed.js` directly | `react-typed@1.2.0` has stale peer dep declaration (React ^16) causing npm 11 install failure; `typed.js` is explicitly allowed in Rules.md §1 and is the underlying library |
 | `swiper` | Installed (v11, with audit warning) | Library is in allowed list; certifications won't use it (decided as plain list); decision pending on whether to upgrade to v14 or remove |
+| Education ordering | Most recent first (SRM IST → 12th → 10th) | Matches standard modern tech portfolio & resume conventions |
 
 ---
 
@@ -45,32 +49,29 @@
 2. **Netlify deploy:** Phase 0 exit criteria includes a live preview URL. Awaiting Aditya's Netlify account + GitHub repo connection.
 3. **Currency symbol in MAE metric (PRD.md §11):** Assumed ₹ (INR) — confirm before Phase 10.
 4. **"Third-year" vs 2027 graduation-year note (PRD.md §11):** Left as-is from resume — confirm before Phase 10.
-5. **Class XII / X years and scores:** `[TODO]` in content.js — need exact years and scores/percentages.
-6. **Phone number:** `[TODO]` in content.js — need exact number from resume.
-7. **Certification years and credential IDs:** `[TODO]` in content.js for all three certs.
-8. **Social URLs:** All placeholder (`href="#"`) — LinkedIn, GitHub, HackerRank, LeetCode needed.
-9. **GitHub repo URLs:** FinanceFlow and House Price Prediction projects — needed for Phase 5.
+5. **Phone number:** `[TODO]` in content.js — need exact number from resume.
+6. **Certification years and credential IDs:** `[TODO]` in content.js for all three certs.
+7. **Social URLs:** All placeholder (`href="#"`) — LinkedIn, GitHub, HackerRank, LeetCode needed.
+8. **GitHub repo URLs:** FinanceFlow and House Price Prediction projects — needed for Phase 5.
 
 ---
 
-## Phase 2 Exit Criteria Check
+## Phase 3 Exit Criteria Check
 
 | Criterion | Status |
 |---|---|
+| Content pulled only from `content.js` | ✓ |
+| Timeline order decided & documented | ✓ |
+| Responsive at all breakpoints | ✓ |
 | `npm run build` succeeds | ✓ |
-| `resume.pdf` downloads correctly | ✓ |
-| Typed.js cycles through roles | ✓ |
-| Layout responsive at all breakpoints | ✓ |
-| Reduced-motion shows static text | ✓ |
 
 ---
 
 ## Next Step to Resume From
 
-**Start Phase 3 — About & Education**
+**Start Phase 4 — Skills**
 
 Tasks:
-1. Build full `About.jsx` rendering summary text.
-2. Build full `Education.jsx` as a two-tier timeline.
-3. Ensure timeline order is chronologically descending (newest first).
-4. Extract content solely from `content.js`.
+1. Render grouped skill categories (Languages, Data & ML, Web, Tools) from `content.js`.
+2. Ensure visually distinct, ledger-card style categories (not a flat tag dump).
+3. Ensure sensible keyboard/screen-reader order.
