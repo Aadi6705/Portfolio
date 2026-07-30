@@ -3,29 +3,29 @@
 
 ---
 
-## Current State: Phase 1 COMPLETE ✓
+## Current State: Phase 2 COMPLETE ✓
 
-**Last updated:** 2026-07-31 (Phase 1 sign-off)
+**Last updated:** 2026-07-31 (Phase 2 sign-off)
 **Branch:** main (synced with GitHub remote)
 
 ---
 
-## Phase 1 — What Was Completed
+## Phase 2 — What Was Completed
 
-- Built `Navbar.jsx` with responsive sticky behavior, active section tracking (IntersectionObserver), and mobile hamburger menu.
-- Built `Footer.jsx` matching Design.md palette (Deep Navy/Brass/Slate) and styling.
-- Added reusable `SectionHeading.jsx` component.
-- Updated all section shells (`Hero`, `About`, `Education`, `Skills`, `Projects`, `Certifications`, `Contact`) with `SectionHeading` and proper `id` linking.
-- Validated `npm run build` succeeds and Phase 1 exit criteria are met.
+- Built `Hero.jsx` section with responsive 12-column grid layout.
+- Integrated `typed.js` for rotating role text with a blinking cursor (respecting `prefers-reduced-motion` for accessibility).
+- Applied decorative 2px Navy frame to the profile photo per `Design.md`.
+- Added primary CTAs (View Projects, Download Resume) using the `Button` UI component.
+- Implemented entrance animations using `useScrollReveal`.
+- Replaced placeholder files with actual `resume.pdf` and `profile.jpg` in `/public`.
 
 ### Files modified
 
 | File | Status |
 |---|---|
-| `src/components/layout/Navbar.jsx` | ✓ |
-| `src/components/layout/Footer.jsx` | ✓ |
-| `src/components/ui/SectionHeading.jsx` | ✓ |
-| `src/components/sections/*.jsx` | ✓ (shells updated) |
+| `src/components/sections/Hero.jsx` | ✓ |
+| `public/profile.jpg` | ✓ (added) |
+| `public/resume.pdf` | ✓ (added) |
 
 ---
 
@@ -50,28 +50,27 @@
 7. **Certification years and credential IDs:** `[TODO]` in content.js for all three certs.
 8. **Social URLs:** All placeholder (`href="#"`) — LinkedIn, GitHub, HackerRank, LeetCode needed.
 9. **GitHub repo URLs:** FinanceFlow and House Price Prediction projects — needed for Phase 5.
-10. **Resume & Photo:** `public/resume.pdf` and `public/profile.jpg` needed before Phase 2 sign-off.
 
 ---
 
-## Phase 1 Exit Criteria Check
+## Phase 2 Exit Criteria Check
 
 | Criterion | Status |
 |---|---|
 | `npm run build` succeeds | ✓ |
-| Nav clicks scroll to correct section | ✓ |
-| Mobile hamburger opens/closes | ✓ |
-| Test heading matches Design.md | ✓ |
+| `resume.pdf` downloads correctly | ✓ |
+| Typed.js cycles through roles | ✓ |
+| Layout responsive at all breakpoints | ✓ |
+| Reduced-motion shows static text | ✓ |
 
 ---
 
 ## Next Step to Resume From
 
-**Start Phase 2 — Hero Section**
+**Start Phase 3 — About & Education**
 
 Tasks:
-1. Build full `Hero.jsx` section.
-2. Integrate `typed.js` for rotating role text.
-3. Include primary CTAs (Contact, Download Resume) and photo.
-4. Ensure reduced-motion respects static text.
-5. Needs `resume.pdf` and `profile.jpg` for full completion.
+1. Build full `About.jsx` rendering summary text.
+2. Build full `Education.jsx` as a two-tier timeline.
+3. Ensure timeline order is chronologically descending (newest first).
+4. Extract content solely from `content.js`.

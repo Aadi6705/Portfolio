@@ -1,2 +1,0 @@
-PLACEHOLDER — replace this file with the real resume.pdf before Phase 2 sign-off.
-The file must be named exactly "resume.pdf" and placed in /public/.
