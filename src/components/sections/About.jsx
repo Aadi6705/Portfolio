@@ -1,11 +1,16 @@
-// src/components/sections/About.jsx — Phase 0 shell
+// src/components/sections/About.jsx — Phase 1 shell (filled in Phase 3)
+import SectionHeading from '../ui/SectionHeading.jsx'
+
 export default function About() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="section-padding bg-paper">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="section-padding bg-paper"
+    >
       <div className="content-container">
-        <h2 id="about-heading" className="font-serif text-h2 text-navy">
-          About — Phase 3
-        </h2>
+        <SectionHeading id="about-heading">About</SectionHeading>
+        <p className="font-sans text-body text-slate">About section — built in Phase 3.</p>
       </div>
     </section>
   )

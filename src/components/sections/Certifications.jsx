@@ -1,11 +1,16 @@
-// src/components/sections/Certifications.jsx — Phase 0 shell
+// src/components/sections/Certifications.jsx — Phase 1 shell (filled in Phase 6)
+import SectionHeading from '../ui/SectionHeading.jsx'
+
 export default function Certifications() {
   return (
-    <section id="certifications" aria-labelledby="certifications-heading" className="section-padding bg-paper">
+    <section
+      id="certifications"
+      aria-labelledby="certifications-heading"
+      className="section-padding bg-paper border-t border-slate/10"
+    >
       <div className="content-container">
-        <h2 id="certifications-heading" className="font-serif text-h2 text-navy">
-          Certifications — Phase 6
-        </h2>
+        <SectionHeading id="certifications-heading">Certifications</SectionHeading>
+        <p className="font-sans text-body text-slate">Certifications list — built in Phase 6.</p>
       </div>
     </section>
   )
