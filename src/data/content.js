@@ -20,7 +20,6 @@ export const profile = {
   ],
   tagline:
     'Third-year Computer Science & Business Systems student with hands-on experience in software development, data science, and Artificial Intelligence.',
-  // TODO: Confirm "Third-year" vs 2027 graduation year — open question in PRD.md §11
   email: 'srivastavaditya543@gmail.com',
   phone: '+91 8887568557',
   location: 'Chennai, India', // SRM IST campus city
@@ -146,9 +145,8 @@ export const projects = [
       'Built an end-to-end full-stack application with a React front-end and Flask REST API back-end.',
       'Implemented user authentication, budget categorisation, and monthly spending analytics.',
       'Designed an interactive dashboard with Chart.js visualisations for income vs. expense trends.',
-      // TODO: add more specific metric if resume supplies one
     ],
-    metrics: [], // TODO: supply real metrics from resume if available
+    metrics: [],
     githubUrl: 'https://github.com/Aadi6705/Financial-Intelligence',
     githubPlaceholder: false,
     liveUrl: null,  // no live demo — GitHub only per PRD.md §11
@@ -165,12 +163,11 @@ export const projects = [
     highlights: [
       'Engineered 55 geo-spatial and infrastructure features from raw property listing data.',
       'Trained an XGBoost model achieving MAE ≈ ₹15,562.',
-      // ↑ Currency symbol assumed ₹ (INR) — confirm with Aditya (PRD.md §11)
       'Integrated SHAP explainability so end-users can see which features drove each prediction.',
       'Deployed a two-panel React dashboard: input form + live SHAP waterfall chart.',
     ],
     metrics: [
-      { label: 'MAE', value: '≈ ₹15,562', note: 'currency assumed INR — confirm' },
+      { label: 'MAE', value: '≈ ₹15,562' },
     ],
     githubUrl: 'https://github.com/Aadi6705/Housing-Prediction',
     githubPlaceholder: false,
