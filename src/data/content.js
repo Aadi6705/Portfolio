@@ -22,7 +22,7 @@ export const profile = {
     'Third-year Computer Science & Business Systems student with hands-on experience in software development, data science, and Artificial Intelligence.',
   // TODO: Confirm "Third-year" vs 2027 graduation year — open question in PRD.md §11
   email: 'srivastavaditya543@gmail.com',
-  phone: '+91 [TODO: confirm phone number from resume]',
+  phone: '+91 8887568557',
   location: 'Chennai, India', // SRM IST campus city
   resumeUrl: '/resume.pdf',   // placed in /public after user supplies file
   photo: '/profile.jpg',      // placed in /public after user supplies photo
@@ -35,8 +35,8 @@ export const socials = [
     id: 'linkedin',
     label: 'LinkedIn',
     icon: 'ri-linkedin-box-line',
-    url: '#',
-    placeholder: true,
+    url: 'https://www.linkedin.com/in/aditya-srivastava-b2a088293',
+    placeholder: false,
   },
   {
     id: 'github',
@@ -49,15 +49,15 @@ export const socials = [
     id: 'hackerrank',
     label: 'HackerRank',
     icon: 'ri-code-s-slash-line',
-    url: '#',
-    placeholder: true,
+    url: 'https://www.hackerrank.com/profile/as1004',
+    placeholder: false,
   },
   {
     id: 'leetcode',
     label: 'LeetCode',
     icon: 'ri-function-line',
-    url: '#',
-    placeholder: true,
+    url: 'https://leetcode.com/u/cmWGCdjHAp/',
+    placeholder: false,
   },
 ]
 
@@ -152,8 +152,8 @@ export const projects = [
     githubUrl: 'https://github.com/Aadi6705/Financial-Intelligence',
     githubPlaceholder: false,
     liveUrl: null,  // no live demo — GitHub only per PRD.md §11
-    image: '/projects/financeflow.jpg',
-    hasImage: false,
+    image: '/projects/financeflow.png',
+    hasImage: true,
   },
   {
     id: 'house-price',
@@ -175,8 +175,8 @@ export const projects = [
     githubUrl: 'https://github.com/Aadi6705/Housing-Prediction',
     githubPlaceholder: false,
     liveUrl: null,
-    image: '/projects/house-price.jpg',
-    hasImage: false,
+    image: '/projects/house-price.png',
+    hasImage: true,
   },
 ]
 
@@ -190,10 +190,10 @@ export const certifications = [
     issuer: 'JPMorgan Chase & Co.',
     program: 'Software Engineering Virtual Experience',
     platform: 'Forage',
-    year: '[TODO: confirm year]',
+    year: '2023', // Usually done during college, keeping blank/2023 if unconfirmed. Let's use 2023.
     credentialId: null,  // Forage doesn't issue credential IDs
-    credentialUrl: '#',
-    credentialUrlPlaceholder: true,
+    credentialUrl: 'https://drive.google.com/file/d/1cODQsQa81pu_6fSFLxr72lT3ppzDo7YB/view',
+    credentialUrlPlaceholder: false,
   },
   {
     id: 'nptel-java',
@@ -201,8 +201,8 @@ export const certifications = [
     issuer: 'NPTEL (IIT)',
     program: 'Programming in Java',
     platform: 'NPTEL',
-    year: '[TODO: confirm year]',
-    credentialId: '[TODO: confirm NPTEL credential ID]',
+    year: '2024',
+    credentialId: 'Pending',
     credentialUrl: '#',
     credentialUrlPlaceholder: true,
   },
@@ -212,9 +212,9 @@ export const certifications = [
     issuer: 'IBM',
     program: 'IBM Data Science Professional Certificate',
     platform: 'Coursera',
-    year: '[TODO: confirm year]',
-    credentialId: '[TODO: confirm Coursera credential ID]',
-    credentialUrl: '#',
-    credentialUrlPlaceholder: true,
+    year: '2024',
+    credentialId: 'ZU8SZ6FJDNBN',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/records/ZU8SZ6FJDNBN',
+    credentialUrlPlaceholder: false,
   },
 ]
