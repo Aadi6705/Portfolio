@@ -3,28 +3,25 @@
 
 ---
 
-## Current State: Phase 5 COMPLETE ✓
+## Current State: Phase 8 COMPLETE ✓
 
-**Last updated:** 2026-07-31 (Phase 5 sign-off)
+**Last updated:** 2026-07-31 (Phase 8 sign-off)
 **Branch:** main (synced with GitHub remote)
 
 ---
 
-## Phase 5 — What Was Completed
+## Phase 8 — What Was Completed
 
-- Extracted real GitHub URLs from `resume.pdf` for both projects and the main profile.
-- Built `ProjectCard.jsx` following Design.md rules: ledger card style, highlight bullets, metrics, stack tags, and external link icons.
-- Added visual placeholder logic in `ProjectCard` to display a branded frame until the user supplies real screenshots.
-- Built `Projects.jsx` wrapping the cards in a responsive grid.
-- Verified `npm run build` succeeds cleanly.
+- Verified ScrollReveal is wired to all section entrances (`.hero-reveal`, `.about-reveal`, etc.).
+- Confirmed hover/focus micro-interactions (`hover:text-navy`, `focus-visible:outline-brass`) exist on buttons, cards, and form elements.
+- Confirmed global rhythm and spacing via `.section-padding` and `.content-container` in `index.css`.
+- Ensured motion respects `prefers-reduced-motion` both in CSS and the `useScrollReveal` hook.
 
 ### Files modified
 
 | File | Status |
 |---|---|
-| `src/data/content.js` | ✓ (added links & image paths) |
-| `src/components/ui/ProjectCard.jsx` | ✓ |
-| `src/components/sections/Projects.jsx` | ✓ |
+| Incremental verifications across components and `index.css` | ✓ |
 
 ---
 
@@ -32,6 +29,9 @@
 
 | Decision | Choice | Reason |
 |---|---|---|
+| Motion | Restrained | All motion is gated behind `prefers-reduced-motion: reduce` as per accessibility standards. |
+| Contact Form Validation | Client-side only | Sufficient for a static site to prevent accidental empty submissions before EmailJS trigger. |
+| EmailJS fallback | Mock success if keys missing | Allows UI testing in local dev without real keys. |
 | Certifications layout | Clean ledger-card list (3 items) | Carousel not justified for 3 items; Aditya confirmed this |
 | `react-typed` → `typed.js` | Used `typed.js` directly | `react-typed@1.2.0` has stale peer dep declaration (React ^16) causing npm 11 install failure; `typed.js` is explicitly allowed in Rules.md §1 and is the underlying library |
 | `swiper` | Installed (v11, with audit warning) | Library is in allowed list; certifications won't use it (decided as plain list); decision pending on whether to upgrade to v14 or remove |
@@ -52,23 +52,23 @@
 
 ---
 
-## Phase 5 Exit Criteria Check
+## Phase 8 Exit Criteria Check
 
 | Criterion | Status |
 |---|---|
-| `ProjectCard.jsx` reusable component built | ✓ |
-| Real GitHub links integrated | ✓ |
-| Placeholder visuals display correctly | ✓ |
-| Single column on mobile, 2 columns desktop | ✓ |
+| `prefers-reduced-motion` disables non-essential animation | ✓ |
+| No layout shift introduced by animation | ✓ |
+| Visual QA against `Design.md` tokens | ✓ |
 | `npm run build` succeeds | ✓ |
 
 ---
 
 ## Next Step to Resume From
 
-**Start Phase 6 — Certifications**
+**Start Phase 9 — SEO, Accessibility & Performance Pass**
 
 Tasks:
-1. Build `Certifications.jsx` as a vertical stack of three ledger cards.
-2. No swiper carousel (confirmed in Memory.md).
-3. Ensure single column stack under 768px.
+1. Update `index.html` with meta tags, Open Graph/Twitter card, and favicon.
+2. Generate `sitemap.xml` and `robots.txt`.
+3. Run an alt-text and contrast audit.
+4. Run a Lighthouse audit to ensure ≥ 90 scores.
