@@ -20,7 +20,7 @@ export const profile = {
   ],
   tagline:
     'Third-year Computer Science & Business Systems student with hands-on experience in software development, data science, and Artificial Intelligence.',
-  email: 'srivastavaditya543@gmail.com',
+  email: 'asaditya6705@gmail.com',
   phone: '+91 8887568557',
   location: 'Chennai, India', // SRM IST campus city
   resumeUrl: '/resume.pdf',   // placed in /public after user supplies file
@@ -162,13 +162,10 @@ export const projects = [
     stack: ['Python', 'XGBoost', 'SHAP', 'Pandas', 'Scikit-learn', 'Flask', 'React'],
     highlights: [
       'Engineered 55 geo-spatial and infrastructure features from raw property listing data.',
-      'Trained an XGBoost model achieving MAE ≈ ₹15,562.',
       'Integrated SHAP explainability so end-users can see which features drove each prediction.',
       'Deployed a two-panel React dashboard: input form + live SHAP waterfall chart.',
     ],
-    metrics: [
-      { label: 'MAE', value: '≈ ₹15,562' },
-    ],
+    metrics: [],
     githubUrl: 'https://github.com/Aadi6705/Housing-Prediction',
     githubPlaceholder: false,
     liveUrl: null,

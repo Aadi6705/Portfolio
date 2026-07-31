@@ -65,12 +65,12 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* ── Visual (Screenshot / Placeholder) ─────────────────── */}
-      <div className="mt-8 relative w-full aspect-[16/9] border border-slate/20 bg-slate/5 flex items-center justify-center overflow-hidden group-hover:border-slate/40 transition-colors duration-300">
+      <div className="mt-8 relative w-full aspect-[16/9] border border-slate/20 bg-white flex items-center justify-center overflow-hidden group-hover:border-slate/40 transition-colors duration-300">
         {project.hasImage ? (
           <img
             src={project.image}
             alt={`Screenshot of ${project.name}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain p-2"
             loading="lazy"
           />
         ) : (
@@ -87,7 +87,7 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* ── Highlights & Metrics ──────────────────────────────── */}
-      <div className="mt-8 flex-1 flex flex-col justify-end">
+      <div className="mt-8 flex-1 flex flex-col">
         <ul className="space-y-2 list-none" aria-label={`Highlights of ${project.name}`}>
           {project.highlights.map((point, idx) => (
             <li key={idx} className="flex items-start gap-3 font-sans text-small text-slate">
