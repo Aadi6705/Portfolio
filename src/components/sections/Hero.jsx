@@ -99,15 +99,10 @@ export default function Hero() {
           {/* ── Photo (Right on desktop) ────────────────────────────── */}
           <div className="lg:col-span-5 flex justify-start lg:justify-end order-1 lg:order-2 hero-reveal">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
-              {/* Decorative offset frame per Design.md "Classic/Editorial" vibe */}
-              <div 
-                className="absolute inset-0 bg-transparent border-[2px] border-navy translate-x-4 translate-y-4"
-                aria-hidden="true"
-              />
               <img
                 src={profile.photo}
                 alt={`${profile.name} — Profile Photo`}
-                className="absolute inset-0 w-full h-full object-cover shadow-sm bg-slate/10"
+                className="absolute inset-0 w-full h-full object-cover border-[2px] border-navy bg-white"
                 loading="eager"
                 width={320}
                 height={320}
