@@ -66,39 +66,6 @@ export default function Education() {
                     </div>
                   </div>
 
-                  {/* Semester Breakdown for SRM IST (Inline Lightweight Bar Chart) */}
-                  {item.semesters && item.semesters.length > 0 && (
-                    <div className="mt-6 pt-4 border-t border-slate/15">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="mono-label text-[11px]">Semester Performance (SGPA)</span>
-                        <span className="font-mono text-caption text-slate">Scale: 10.0</span>
-                      </div>
-                      
-                      <div className="grid grid-cols-6 gap-2 pt-2">
-                        {item.semesters.map((s) => {
-                          // Scale bar height relative to max GPA 10.0
-                          const heightPercent = (s.gpa / 10) * 100
-                          return (
-                            <div key={s.sem} className="flex flex-col items-center gap-1.5">
-                              <span className="font-mono text-[11px] font-semibold text-navy">
-                                {s.gpa.toFixed(2)}
-                              </span>
-                              <div className="w-full bg-slate/10 rounded-xs h-16 flex items-end p-0.5 overflow-hidden">
-                                <div
-                                  className="w-full bg-navy/80 hover:bg-brass transition-colors duration-150 rounded-xs"
-                                  style={{ height: `${heightPercent}%` }}
-                                  title={`${s.sem}: ${s.gpa}`}
-                                />
-                              </div>
-                              <span className="font-mono text-[10px] text-slate uppercase">
-                                {s.sem}
-                              </span>
-                            </div>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}

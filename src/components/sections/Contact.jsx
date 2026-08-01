@@ -190,9 +190,10 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   disabled={status === 'submitting'}
+                  maxLength={500}
                   rows="4"
                   className="w-full bg-transparent border-b border-slate/30 py-2 font-sans text-body text-ink focus:border-navy focus:outline-none transition-colors duration-fast resize-y disabled:opacity-50"
-                  placeholder="How can I help you?"
+                  placeholder="How can I help you? (max 500 characters)"
                 />
               </div>
 
