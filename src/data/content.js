@@ -40,7 +40,7 @@ export const socials = [
   {
     id: 'github',
     label: 'GitHub',
-    icon: 'ri-github-line',
+    icon: 'ri-github-fill',
     url: 'https://github.com/Aadi6705',
     placeholder: false,
   },
@@ -54,7 +54,7 @@ export const socials = [
   {
     id: 'leetcode',
     label: 'LeetCode',
-    icon: 'ri-function-line',
+    icon: 'ri-code-box-line',
     url: 'https://leetcode.com/u/cmWGCdjHAp/',
     placeholder: false,
   },
@@ -69,7 +69,7 @@ export const education = [
     institution: 'SRM Institute of Science and Technology',
     degree: 'B.Tech Computer Science & Business Systems',
     duration: '2023 – 2027',
-    score: 'CGPA 8.14 / 10',
+    score: 'CGPA 8.14/10',
     location: 'Chennai, India',
     note: 'Class of 2027',
     arrears: '0 Backlogs',
@@ -108,7 +108,7 @@ export const education = [
 export const skills = [
   {
     category: 'Languages',
-    items: ['Python', 'Java', 'C', 'JavaScript', 'SQL'],
+    items: ['Python', 'Java', 'JavaScript', 'SQL', 'C'],
   },
   {
     category: 'Data & ML',
@@ -137,7 +137,7 @@ export const projects = [
   {
     id: 'financeflow',
     tabLabel: 'PROJECT · FULL STACK',   // ledger-card mono tab (Design.md §5)
-    name: 'FinanceFlow',
+    name: 'Expense Tracker',
     summary:
       'A personal finance management web application for tracking income, expenses, and budgets in real time.',
     stack: ['React', 'Flask', 'Python', 'SQLite', 'Chart.js'],
@@ -150,7 +150,7 @@ export const projects = [
     githubUrl: 'https://github.com/Aadi6705/Financial-Intelligence',
     githubPlaceholder: false,
     liveUrl: null,  // no live demo — GitHub only per PRD.md §11
-    image: '/projects/financeflow.png',
+    image: '/projects/expense-tracker.png',
     hasImage: true,
   },
   {

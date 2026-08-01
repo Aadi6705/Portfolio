@@ -54,12 +54,7 @@ export default function Certifications() {
 
                 {/* External Link Button */}
                 <div className="mt-2 sm:mt-0 flex-shrink-0">
-                  {cert.credentialUrlPlaceholder ? (
-                    <span className="inline-flex items-center gap-2 px-4 py-2 font-mono text-small text-slate/50 bg-slate/5 border border-slate/10 rounded cursor-not-allowed">
-                      Verify Credential
-                      <i className="ri-external-link-line" aria-hidden="true" />
-                    </span>
-                  ) : (
+                  {!cert.credentialUrlPlaceholder && (
                     <a
                       href={cert.credentialUrl}
                       target="_blank"
