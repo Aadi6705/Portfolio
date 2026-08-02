@@ -15,11 +15,11 @@ export const profile = {
   roles: [
     'Software Engineer',
     'Full-Stack Developer',
-    'Data Science Enthusiast',
+    'Backend Web Engineer',
     'B.Tech CSBS @ SRM IST',
   ],
   tagline:
-    'Third-year Computer Science & Business Systems student with hands-on experience in software development, data science, and Artificial Intelligence.',
+    'Third-year Computer Science & Business Systems student with hands-on experience in full-stack web development, backend engineering, and modern software architecture.',
   email: 'asaditya6705@gmail.com',
   phone: '+91 8887568557',
   location: 'Chennai, India', // SRM IST campus city
@@ -111,24 +111,24 @@ export const skills = [
     items: ['Python', 'Java', 'JavaScript', 'SQL', 'C'],
   },
   {
-    category: 'Data & ML',
+    category: 'Databases & Backend',
     items: [
-      'Pandas',
-      'NumPy',
-      'Scikit-learn',
-      'XGBoost',
-      'SHAP',
-      'Matplotlib',
-      'Seaborn',
+      'PostgreSQL',
+      'SQLite',
+      'REST APIs',
+      'Express',
+      'Database Design',
+      'Node.js',
+      'Flask',
     ],
   },
   {
     category: 'Web',
-    items: ['React', 'Vite', 'HTML5', 'CSS3', 'Tailwind CSS', 'Flask'],
+    items: ['React', 'Vite', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive UI'],
   },
   {
     category: 'Tools',
-    items: ['Git', 'GitHub', 'Jupyter', 'VS Code', 'Netlify'],
+    items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Netlify'],
   },
 ]
 
@@ -155,15 +155,15 @@ export const projects = [
   },
   {
     id: 'house-price',
-    tabLabel: 'PROJECT · DATA SCIENCE',
-    name: 'Explainable House Price Prediction',
+    tabLabel: 'PROJECT · WEB & ANALYTICS',
+    name: 'Property Valuation Analytics Portal',
     summary:
-      'An XGBoost regression model for Indian residential property prices, made interpretable with SHAP values.',
-    stack: ['Python', 'XGBoost', 'SHAP', 'Pandas', 'Scikit-learn', 'Flask', 'React'],
+      'An interactive property valuation and analytics platform providing real-time market estimation and structural value breakdowns.',
+    stack: ['React', 'Flask', 'Python', 'SQLite', 'Pandas', 'Tailwind CSS'],
     highlights: [
-      'Engineered 55 geo-spatial and infrastructure features from raw property listing data.',
-      'Integrated SHAP explainability so end-users can see which features drove each prediction.',
-      'Deployed a two-panel React dashboard: input form + live SHAP waterfall chart.',
+      'Engineered data analytics pipelines to evaluate geo-spatial and structural property features.',
+      'Implemented dynamic visual reporting components to break down valuation metrics for end-users.',
+      'Designed and deployed a responsive two-panel React dashboard with seamless REST API integration.',
     ],
     metrics: [],
     githubUrl: 'https://github.com/Aadi6705/Housing-Prediction',
