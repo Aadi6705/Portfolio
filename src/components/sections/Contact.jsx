@@ -155,7 +155,7 @@ export default function Contact() {
               noValidate
             >
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="font-mono text-small text-ink">Name</label>
+                <label htmlFor="name" className="font-mono text-small text-ink font-medium">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -163,13 +163,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   disabled={status === 'submitting'}
-                  className="w-full bg-transparent border-b border-slate/30 py-2 font-sans text-body text-ink focus:border-navy focus:outline-none transition-colors duration-fast disabled:opacity-50"
-                  placeholder="John Doe"
+                  className="w-full bg-slate/5 border border-slate/25 rounded-md px-4 py-2.5 font-sans text-body text-ink focus:border-navy focus:bg-paper focus:ring-2 focus:ring-navy/10 focus:outline-none transition-all duration-200 disabled:opacity-50"
+                  placeholder="Your Name"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="font-mono text-small text-ink">Email</label>
+                <label htmlFor="email" className="font-mono text-small text-ink font-medium">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -177,13 +177,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   disabled={status === 'submitting'}
-                  className="w-full bg-transparent border-b border-slate/30 py-2 font-sans text-body text-ink focus:border-navy focus:outline-none transition-colors duration-fast disabled:opacity-50"
-                  placeholder="john@example.com"
+                  className="w-full bg-slate/5 border border-slate/25 rounded-md px-4 py-2.5 font-sans text-body text-ink focus:border-navy focus:bg-paper focus:ring-2 focus:ring-navy/10 focus:outline-none transition-all duration-200 disabled:opacity-50"
+                  placeholder="your.email@example.com"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="font-mono text-small text-ink">Message</label>
+                <label htmlFor="message" className="font-mono text-small text-ink font-medium">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -192,7 +192,7 @@ export default function Contact() {
                   disabled={status === 'submitting'}
                   maxLength={500}
                   rows="4"
-                  className="w-full bg-transparent border-b border-slate/30 py-2 font-sans text-body text-ink focus:border-navy focus:outline-none transition-colors duration-fast resize-y disabled:opacity-50"
+                  className="w-full bg-slate/5 border border-slate/25 rounded-md px-4 py-2.5 font-sans text-body text-ink focus:border-navy focus:bg-paper focus:ring-2 focus:ring-navy/10 focus:outline-none transition-all duration-200 resize-y disabled:opacity-50"
                   placeholder="How can I help you? (max 500 characters)"
                 />
               </div>

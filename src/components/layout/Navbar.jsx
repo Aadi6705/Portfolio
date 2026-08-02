@@ -59,8 +59,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-navy transition-shadow duration-[150ms] ${
-        scrolled ? 'shadow-[0_1px_0_0_rgba(107,116,128,0.25)]' : ''
+      className={`sticky top-0 z-50 bg-navy/95 backdrop-blur-md transition-all duration-200 ${
+        scrolled ? 'shadow-md border-b border-paper/10' : 'border-b border-transparent'
       }`}
       role="banner"
     >

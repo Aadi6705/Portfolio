@@ -66,6 +66,25 @@ export default function Education() {
                     </div>
                   </div>
 
+                  {item.semesters && item.semesters.length > 0 && (
+                    <div className="mt-4 pt-3 border-t border-slate/10">
+                      <p className="font-mono text-[11px] text-slate uppercase tracking-wider mb-2">
+                        Semester GPA Breakdown
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                        {item.semesters.map((s) => (
+                          <div
+                            key={s.sem}
+                            className="flex flex-col items-center justify-center p-2 rounded bg-navy/5 border border-navy/10 hover:border-brass/30 transition-colors"
+                          >
+                            <span className="font-mono text-[11px] text-slate">{s.sem}</span>
+                            <span className="font-mono text-small font-semibold text-navy mt-0.5">{s.gpa}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                 </div>
               </div>
             ))}

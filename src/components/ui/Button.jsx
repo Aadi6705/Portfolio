@@ -11,7 +11,7 @@ export default function Button({
   ...props
 }) {
   const base =
-    'inline-flex items-center gap-2 px-6 py-3 font-sans text-small font-medium transition-colors duration-[150ms] focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2'
+    'inline-flex items-center justify-center gap-2 px-6 py-3 font-sans text-small font-medium rounded-md shadow-xs active:scale-[0.98] transition-all duration-[150ms] focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass focus-visible:outline-offset-2'
 
   const variants = {
     primary:

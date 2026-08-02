@@ -15,7 +15,7 @@ export const profile = {
   roles: [
     'Software Engineer',
     'Full-Stack Developer',
-    'Data Science Enthusiast',
+    'Data Science & AI Developer',
     'B.Tech CSBS @ SRM IST',
   ],
   tagline:
@@ -111,7 +111,7 @@ export const skills = [
     items: ['Python', 'Java', 'JavaScript', 'SQL', 'C'],
   },
   {
-    category: 'Data & ML',
+    category: 'Data Science & AI',
     items: [
       'Pandas',
       'NumPy',
