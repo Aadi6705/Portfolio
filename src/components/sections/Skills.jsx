@@ -9,7 +9,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal.js'
 // Mapping categories to distinct Remix Icons for visual readability
 const CATEGORY_ICONS = {
   Languages: 'ri-code-s-slash-line',
-  'Data & ML': 'ri-line-chart-line',
+  'Data Science & AI': 'ri-line-chart-line',
   Web: 'ri-layout-3-line',
   Tools: 'ri-tools-line',
 }
@@ -48,7 +48,7 @@ export default function Skills() {
                   >
                     {group.items.map((skill) => (
                       <li key={skill}>
-                        <span className="inline-flex items-center px-3 py-1.5 font-mono text-small text-ink bg-paper border border-slate/25 rounded-xs hover:border-brass hover:text-navy transition-colors duration-150">
+                        <span className="inline-flex items-center px-3.5 py-1.5 font-mono text-small text-ink bg-slate/5 border border-slate/20 rounded-md hover:border-navy hover:bg-navy hover:text-paper hover:-translate-y-0.5 transition-all duration-200 cursor-default shadow-2xs">
                           {skill}
                         </span>
                       </li>

@@ -55,6 +55,12 @@ export default function Hero() {
           
           {/* ── Text Content (Left on desktop) ───────────────────────── */}
           <div className="lg:col-span-7 flex flex-col order-2 lg:order-1 hero-reveal">
+            {/* Status Pill */}
+            <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/5 border border-navy/15 text-navy font-mono text-xs w-fit">
+              <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+              <span>Available for Software Engineering Roles</span>
+            </div>
+
             <h1
               id="hero-heading"
               className="font-serif text-h1-mob md:text-display text-ink leading-[1.15]"
@@ -77,9 +83,26 @@ export default function Hero() {
               {profile.tagline}
             </p>
 
+            {/* Quick Metrics Badges */}
+            <div className="mt-6 flex flex-wrap items-center gap-3 font-mono text-xs text-slate">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-paper border border-slate/20">
+                <i className="ri-graduation-cap-line text-brass" aria-hidden="true" />
+                CGPA 8.14 / 10
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-paper border border-slate/20">
+                <i className="ri-checkbox-circle-line text-success" aria-hidden="true" />
+                0 Backlogs
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-paper border border-slate/20">
+                <i className="ri-building-line text-navy" aria-hidden="true" />
+                SRM IST '27
+              </span>
+            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Button href="#projects" variant="primary">
-                View Projects
+                View Selected Projects
+                <i className="ri-arrow-right-line text-[16px]" aria-hidden="true" />
               </Button>
               <Button
                 href={profile.resumeUrl}
@@ -97,12 +120,14 @@ export default function Hero() {
           </div>
 
           {/* ── Photo (Right on desktop) ────────────────────────────── */}
-          <div className="lg:col-span-5 flex justify-start lg:justify-end order-1 lg:order-2 hero-reveal">
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2 hero-reveal">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 group">
+              {/* Background accent card */}
+              <div className="absolute inset-0 translate-x-3 translate-y-3 bg-navy/10 border border-brass/30 rounded-2xl transition-transform duration-300 group-hover:translate-x-4 group-hover:translate-y-4" />
               <img
                 src={profile.photo}
                 alt={`${profile.name} — Profile Photo`}
-                className="absolute inset-0 w-full h-full object-cover border-[2px] border-navy bg-white"
+                className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-navy/30 bg-white shadow-lg transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1"
                 loading="eager"
                 width={320}
                 height={320}

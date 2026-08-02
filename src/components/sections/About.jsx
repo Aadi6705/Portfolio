@@ -47,7 +47,7 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <i className="ri-code-box-line text-brass text-base" aria-hidden="true" />
-                  <span>Full-Stack &amp; ML Engineering</span>
+                  <span>Full-Stack &amp; Software Engineering</span>
                 </li>
               </ul>
             </div>

@@ -56,7 +56,7 @@ export default function ProjectCard({ project }) {
         <ul className="flex flex-wrap gap-2 mt-5 list-none" aria-label={`Technologies used in ${project.name}`}>
           {project.stack.map((tech) => (
             <li key={tech}>
-              <span className="inline-flex items-center px-2.5 py-1 font-mono text-[12px] text-ink bg-slate/5 border border-slate/15 rounded-xs">
+              <span className="inline-flex items-center px-3 py-1 font-mono text-[12px] text-navy bg-navy/5 border border-navy/15 rounded-full font-medium">
                 {tech}
               </span>
             </li>
@@ -65,12 +65,12 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* ── Visual (Screenshot / Placeholder) ─────────────────── */}
-      <div className="mt-8 relative w-full aspect-[16/9] border border-slate/20 bg-white flex items-center justify-center overflow-hidden group-hover:border-slate/40 transition-colors duration-300">
+      <div className="mt-8 relative w-full aspect-[16/9] border border-slate/20 bg-slate/5 rounded-xl flex items-center justify-center overflow-hidden shadow-inner group-hover:border-brass/40 transition-colors duration-300">
         {project.hasImage ? (
           <img
             src={project.image}
             alt={`Screenshot of ${project.name}`}
-            className="w-full h-full object-contain p-2"
+            className="w-full h-full object-cover p-2 rounded-xl group-hover:scale-[1.03] transition-transform duration-500 ease-out"
             loading="lazy"
           />
         ) : (
@@ -87,12 +87,12 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* ── Highlights & Metrics ──────────────────────────────── */}
-      <div className="mt-8 flex-1 flex flex-col">
-        <ul className="space-y-2 list-none" aria-label={`Highlights of ${project.name}`}>
+      <div className="mt-8 flex-1 flex flex-col justify-between">
+        <ul className="space-y-2.5 list-none" aria-label={`Highlights of ${project.name}`}>
           {project.highlights.map((point, idx) => (
             <li key={idx} className="flex items-start gap-3 font-sans text-small text-slate">
-              <span className="text-brass mt-[5px]" aria-hidden="true">▪</span>
-              <span>{point}</span>
+              <i className="ri-checkbox-circle-fill text-brass text-base flex-shrink-0 mt-0.5" aria-hidden="true" />
+              <span className="leading-snug">{point}</span>
             </li>
           ))}
         </ul>
@@ -107,6 +107,23 @@ export default function ProjectCard({ project }) {
                 </span>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* View Code CTA Button */}
+        {project.githubUrl && !project.githubPlaceholder && (
+          <div className="mt-6 pt-4 border-t border-slate/10 flex justify-end">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 font-mono text-xs font-medium text-navy bg-navy/5 border border-navy/15 rounded-md hover:bg-navy hover:text-paper hover:border-navy transition-all duration-200"
+              aria-label={`View ${project.name} repository on GitHub`}
+            >
+              <i className="ri-github-fill text-base" aria-hidden="true" />
+              View Source Code
+              <i className="ri-arrow-right-up-line text-sm" aria-hidden="true" />
+            </a>
           </div>
         )}
       </div>
