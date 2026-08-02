@@ -90,7 +90,7 @@ export default function Contact() {
                 Let's get in touch
               </h3>
               <p className="font-sans text-body text-slate mt-4 max-w-sm">
-                I'm currently open to software engineering and data science opportunities. 
+                I'm currently open to software engineering and full-stack development opportunities. 
                 Whether you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
             </div>

@@ -9,7 +9,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal.js'
 // Mapping categories to distinct Remix Icons for visual readability
 const CATEGORY_ICONS = {
   Languages: 'ri-code-s-slash-line',
-  'Data & ML': 'ri-line-chart-line',
+  'Databases & Backend': 'ri-database-2-line',
   Web: 'ri-layout-3-line',
   Tools: 'ri-tools-line',
 }
